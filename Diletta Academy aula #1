@@ -1,0 +1,91 @@
+Neste documento estão registradas a atividades que eu realizei na primeira aula de Flutter do Diletta Academy 2021 (2° turma) até o presente momento (12/11/2021);
+OBS.: Irei atualizar o documento até finalizar os exercícios da aula e irei incluir um arquivo ".txt" caso voce queira obter os códigos aqui registrados, mas lembrem-se que estão em ".dart" e ."JS";
+
+// Code centuryFromYear - 1° Exercício (1° Bloco de questões) - Feito em JAVA.SCRIPT
+
+function centuryFromYear(year) { // definição da função em relação a variável ano
+let century = 0;                 // Declara a variável "century" no escopo com valor nulo
+while (year > 0){                // "Enquanto variável ano for maior que 0"
+    year = year - 100;           // "variável ano = variável ano - 100"
+    century = century + 1;       // "variável century = variável century + 1"
+}
+return century;                  // Retorna o valor da variável century 
+}
+
+
+// Outra maneira de fazer 
+/*
+function centuryFromYear(year){   // definição da função em relação a variável ano
+    return Math.ceil(year/100);   // Retorna o valor da variável ano e a divide por 100 através do comando Math.ceil, o qual retorna o menor número inteiro maior ou igual a "X" que no caso é relativo a "year"
+}
+*/
+/* Referencia utilizada: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil
+   https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/let
+   https://www.youtube.com/watch?v=evzOtMr5Y0w
+   https://github.com/EQuimper/CodeChallenge/blob/master/javascript/CodeFights/arcade/intro/centuryFromYear.md
+*/
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Code checkPalindrome - 2° Exercício (1° Bloco de questões) - Feito em JAVA.SCRIPT
+function checkPalindrome(inputString) {                                 // Define a função de checar o palindromo em realção a String Input
+    return inputString.split('').reverse().join('') === inputString    // Retorna o valor da String, enquanto separa as letras do palíndromo, aplicam a reversão e por fim as reorganizam. No caso se a oção for verdadeira ele irá conferir o palíndromo e não irá identifcar nenhum erro no OUTPUT, caso esteja errado, irá identificar erro no OUTPUT devido a palavra não ser um palíndromo
+    
+}
+
+// Code checkPalindrome - 2° Exercício (1° Bloco de questões) - Feito em DART
+// este código deu errado 
+import 'dart:io';
+void main(){
+  print("Entre com o valor de números ou palavras");
+  String? original = stdin.readLineSync();
+  String? reverse = original!.split('').reversed.join('');
+  if (original == reverse){
+	print("Parabéns, é um palíndromo !!");
+ }else{
+   print("Lamento, isto não é um palíndromo :(");
+  }
+}
+
+//  Code checkPalindrome - 2° Exercício (1° Bloco de questões) - Feito em DART
+ bool checkPalindrome(String word, String number){
+	return word == word.split('').reversed.join();
+	return number == word.split('').reversed.join();
+}
+
+//  Funcional 
+//  Code checkPalindrome - 2° Exercício (1° Bloco de questões) - Feito em DART
+bool checkPalindrome(String word){                         // Define a função booleana de checagem do palíndromo através da string "Word"
+	return word == word.split('').reversed.join();         // Retorna o valor da variável "word" enquanto a mesma é atribuida a sequencia de separação dos caracteres, sua reversão e sua ligação para a checagem do palíndromo 
+}     
+
+
+
+/* Referencia utilizada: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+                         https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
+                         https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+                         https://protocoderspoint.com/palindrome-program-dart/
+                         https://youtu.be/YmZkKWbPJvI
+*/
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Code xxx - 1° Exercício (2° Bloco de questões)
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Code xxx - 2° Exercício (2° Bloco de questões)
+
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Code add - 1° Exercício (3° Bloco de questões) - Feito em JAVA.SCRIPT
+
+function add(param1, param2) {        // Define a função add (adição) em realção ao primeiro parametro e o segundo parametro os quais são variáveis.
+
+    return param1 + param2;           // Retorna o valor do primeiro parametro somado ao segundo parametro 
+}
+
+// Code add - 1° Exercício (3° Bloco de questões) - Feito em DART
+
+int add(int param1, int param2){  // Define a função de adição relacionando as variáveis inteiras de parametro 1 e 2 
+    return param1 + param2;       // Retorna o valor somado dos dois parametros 
+}
